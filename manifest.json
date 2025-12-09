@@ -1,9 +1,0 @@
-{
-  "domain": "json_api_sensor",
-  "name": "Generic JSON API Sensor",
-  "documentation": "https://github.com/jane_t/json_api_sensor",
-  "codeowners": [],
-  "requirements": [],
-  "version": "1.0.0",
-  "iot_class": "cloud_polling"
-}
