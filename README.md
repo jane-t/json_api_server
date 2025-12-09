@@ -110,6 +110,7 @@ sensor:
 
 ## Usage Examples
 
+
 ### Example 1: Readeck Bookmarks
 
 Fetch bookmarks from Readeck and display only URL and title:
@@ -207,6 +208,24 @@ When no `attributes_template` is provided:
 - **Array response**: State = array length, attributes stored under `items` key
 - **Object response**: State = `OK` (or `count`/`total` if present), all keys stored as attributes
 - **Other types**: State = string representation, stored under `raw` key
+
+## Secrets
+
+Secrets can be used for your links and authorisation codes
+
+```
+sensor:
+  - platform: json_api_sensor
+    name: "Readeck Bookmarks"
+    url: !secret readeck_url
+    authorization: !secret readeck_token
+    scan_interval: 300
+```
+
+``` Secrets.yaml
+readeck_url: "https://bookmarks.example.com/api/bookmarks"
+readeck_token: "Bearer YOUR_TOKEN_HERE"
+```
 
 ## Troubleshooting
 
