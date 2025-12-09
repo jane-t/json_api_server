@@ -213,7 +213,9 @@ When no `attributes_template` is provided:
 
 Secrets can be used for your links and authorisation codes
 
-```
+
+Sensor
+``` yaml
 sensor:
   - platform: json_api_sensor
     name: "Readeck Bookmarks"
@@ -221,8 +223,8 @@ sensor:
     authorization: !secret readeck_token
     scan_interval: 300
 ```
-
-``` Secrets.yaml
+Secrets.yaml
+``` yaml
 readeck_url: "https://bookmarks.example.com/api/bookmarks"
 readeck_token: "Bearer YOUR_TOKEN_HERE"
 ```
